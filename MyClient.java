@@ -20,6 +20,8 @@ public class MyClient {
 		
 		send("QUIT");
 		
+		din.close();
+		dout.close();
 		s.close();
 	}	
 }
