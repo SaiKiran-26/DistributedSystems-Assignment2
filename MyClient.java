@@ -9,7 +9,7 @@ public class MyClient {
 	static String response;
 	static int nRec = 0, nLen = 0;
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		Initialize Socket and DataStreams
 		s = new Socket("localhost", 50000);
 		din = new DataInputStream(s.getInputStream());
