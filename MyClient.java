@@ -1,3 +1,4 @@
+import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 public class MyClient {
@@ -38,7 +39,7 @@ public class MyClient {
 		dout.close();
 		s.close();
 	}
-	public static String findLargest() throws IOException{
+	public static String findLargest() throws Exception{
 		send("GETS All");
 		String temp=response;
 		String[] data=temp.split(" ");
@@ -72,14 +73,14 @@ public class MyClient {
 		return data;
 	}
 	//	Send message to server
-	public static void send(String str) throws IOException {
+	public static void send(String str) throws Exception {
 		dout.print(str);
 		dout.flush();
 		System.out.println("Client: " + str);
 		receive();
 	}
 	//	Read message from server
-	public static void receive() throws IOException {
+	public static void receive() throws Exception {
 		int SIZE = Math.max(1000, nRec * nLen + 1);
 		byte[] bytes = new byte[SIZE];
 		din.read(bytes);
