@@ -31,6 +31,8 @@ public class MyClient {
 		nRec = Integer.parseInt(data_resp[1]);
 		nLen = Integer.parseInt(data_resp[2]);
 		send("OK");
+		temp = response;
+		send("OK");
 		String[] servers = temp.split("\n");
 		return servers;
 	}
