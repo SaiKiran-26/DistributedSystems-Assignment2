@@ -19,6 +19,8 @@ public class MyClient {
 		send("REDY");
 		
 		send("QUIT");
+		
+		s.close();
 	}	
 }
 
