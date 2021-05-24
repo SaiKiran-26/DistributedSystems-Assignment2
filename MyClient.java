@@ -9,6 +9,8 @@ public class MyClient {
 	static String response;
 	static int nRec = 0, nLen = 0;
 	
+	static String largest=" ";
+	
 	public static void main(String[] args) throws Exception {
 		Initialize Socket and DataStreams
 		s = new Socket("localhost", 50000);
