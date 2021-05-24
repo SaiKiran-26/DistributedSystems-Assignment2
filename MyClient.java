@@ -24,7 +24,12 @@ public class MyClient {
 		dout.close();
 		s.close();
 	}	
-	
+	public static String[] getCapable(int[] data) throws IOException {
+		send("GETS Capable "+data[3]+" "+data[4]+" "+data[5]);
+		String temp = response;
+		String[] servers = temp.split("\n");
+		return servers;
+	}
 	public static int[] getJobInfo() {
 		String[] info = response.split(" ");
 		int[] data = new int[info.length - 1];
