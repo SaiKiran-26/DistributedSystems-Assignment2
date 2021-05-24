@@ -76,7 +76,7 @@ public class MyClient {
 	public static void send(String str) throws Exception {
 		dout.print(str+"\n");
 		dout.flush();
-		System.out.println("Client: " + str);
+		//System.out.println("Client: " + str);
 		receive();
 	}
 	//	Read message from server
@@ -85,7 +85,7 @@ public class MyClient {
 		byte[] bytes = new byte[SIZE];
 		din.read(bytes);
 		String str = new String(bytes, StandardCharsets.UTF_8);
-		System.out.println("Server: "+str);
+		//System.out.println("Server: "+str);
 		response = str.trim();
 	}
 }
