@@ -53,7 +53,7 @@ public class MyClient {
 		System.out.println("Client: " + str);
 		receive();
 	}
-	
+	//	Read message from server
 	public static void receive() throws IOException {
 		int SIZE = Math.max(1000, nRec * nLen + 1);
 		byte[] bytes = new byte[SIZE];
