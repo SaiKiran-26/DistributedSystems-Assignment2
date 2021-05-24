@@ -24,5 +24,12 @@ public class MyClient {
 		dout.close();
 		s.close();
 	}	
+	
+	public static void send(String str) throws IOException {
+		dout.print(str);
+		dout.flush();
+		System.out.println("Client: " + str);
+		receive();
+	}
 }
 
