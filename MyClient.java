@@ -46,6 +46,7 @@ public class MyClient {
 		}
 		return data;
 	}
+	//	Send message to server
 	public static void send(String str) throws IOException {
 		dout.print(str);
 		dout.flush();
