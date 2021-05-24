@@ -27,6 +27,10 @@ public class MyClient {
 	public static String[] getCapable(int[] data) throws IOException {
 		send("GETS Capable "+data[3]+" "+data[4]+" "+data[5]);
 		String temp = response;
+		String[] data_resp = temp.split(" ");
+		nRec = Integer.parseInt(data_resp[1]);
+		nLen = Integer.parseInt(data_resp[2]);
+		send("OK");
 		String[] servers = temp.split("\n");
 		return servers;
 	}
