@@ -25,6 +25,12 @@ public class MyClient {
 		s.close();
 	}	
 	
+	public static int[] getJobInfo() {
+		String[] info = response.split(" ");
+		int[] data = new int[info.length - 1];
+		
+		return data;
+	}
 	public static void send(String str) throws IOException {
 		dout.print(str);
 		dout.flush();
