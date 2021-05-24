@@ -36,6 +36,8 @@ public class MyClient {
 		String[] servers = temp.split("\n");
 		return servers;
 	}
+	
+	//	Extract information about Job into an integer array
 	public static int[] getJobInfo() {
 		String[] info = response.split(" ");
 		int[] data = new int[info.length - 1];
