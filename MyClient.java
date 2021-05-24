@@ -14,6 +14,9 @@ public class MyClient {
 		s = new Socket("localhost", 50000);
 		din = new DataInputStream(s.getInputStream());
 		dout = new PrintStream(s.getOutputStream(), true);
+		send("HELO");
+		send("AUTH " + System.getProperty("user.name"));
+		send("REDY");
 	}
 }
 
