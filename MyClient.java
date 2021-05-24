@@ -23,7 +23,8 @@ public class MyClient {
 		din.close();
 		dout.close();
 		s.close();
-	}	
+	}
+	//	Gets list of capable servers	
 	public static String[] getCapable(int[] data) throws IOException {
 		send("GETS Capable "+data[3]+" "+data[4]+" "+data[5]);
 		String temp = response;
