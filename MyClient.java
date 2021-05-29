@@ -73,7 +73,12 @@ public class MyClient {
 		return data;
 	}
 	//	Send message to server
-	
+	public static void send(String str) throws Exception {
+		dout.print(str+"\n");
+		dout.flush();
+		//System.out.println("Client: " + str);
+		receive();
+	}
 	//	Read message from server
 	public static void receive() throws Exception {
 		int SIZE = Math.max(1000, nRec * nLen + 1);
